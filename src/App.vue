@@ -1,26 +1,8 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <div>
-        <dropdownbutton />
-      </div>
+    <nav class="navbar navbar-custom">
       <div class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link to="/home" class="nav-link">
-            <font-awesome-icon icon="home" /> Home
-          </router-link>
-        </li>
-        <li v-if="showAdminBoard" class="nav-item">
-          <router-link to="/admin" class="nav-link">Admin Board</router-link>
-        </li>
-        <li v-if="showModeratorBoard" class="nav-item">
-          <router-link to="/mod" class="nav-link">Moderator Board</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link v-if="currentUser" to="/user" class="nav-link"
-            >User</router-link
-          >
-        </li>
+        <!-- <h1>B2E 個網銀後台管理系統</h1> -->
       </div>
 
       <div v-if="!currentUser" class="navbar-nav ml-auto">
@@ -31,7 +13,7 @@
         </li> -->
         <li class="nav-item">
           <router-link to="/login" class="nav-link">
-            <font-awesome-icon icon="sign-in-alt" /> Login
+            <font-awesome-icon icon="sign-in-alt" /> 登入
           </router-link>
         </li>
       </div>
@@ -50,19 +32,26 @@
         </li>
       </div>
     </nav>
-
+    <div>
+      <Menu />
+    </div>
     <div class="container">
       <router-view />
     </div>
   </div>
+
+
 </template>
 
 <script>
-import dropdownbutton from "./components/Dropdown.vue";
+// import dropdownbutton from "./components/Dropdown.vue";
+import Menu from './components/Menu';
+
 export default {
   components: {
-      dropdownbutton,
-    },
+    // dropdownbutton,
+    Menu,
+  },
   computed: {
     currentUser() {
       return this.$store.state.auth.user;
@@ -90,3 +79,23 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.nav-link {
+  color: white;
+}
+
+.navbar-custom {
+  background-color: #45b29d;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+  color: white;
+}
+
+h1 {
+  text-align:center;
+}
+</style>
+

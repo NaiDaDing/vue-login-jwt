@@ -7,7 +7,7 @@
                     aria-haspopup="true"
                     aria-expanded="false"
                     @click="toggleDropdown">
-                    Menu
+                    功能選單
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" :class="{show: isDropdownOpen, 'dropdown-menu':true}">
             <li class="dropdown-item">
