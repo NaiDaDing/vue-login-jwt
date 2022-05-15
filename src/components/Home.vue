@@ -1,10 +1,19 @@
 <template>
-  <div class="container">
-    <header class="jumbotron">
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col">
+          <header class="jumbotron">
       <h3 style="text-align:center">{{ content }}</h3>
-      
     </header>
-  </div>
+    </div>
+    </div>
+
+</div>
+
+
 </template>
 
 <script>
@@ -37,10 +46,9 @@ export default {
 
 <style scoped>
 .container {
-  
 }
 
 .jumbotron {
-    text-align: center;
-  }
+  text-align: center;
+}
 </style>
