@@ -3,13 +3,9 @@
 
 
 <div class="container">
-    <div class="row">
-    <div class="col">
-          <header class="jumbotron">
-      <h3 style="text-align:center">{{ content }}</h3>
+    <header class="jumbotron">
+      <h3>{{ content }}</h3>
     </header>
-    </div>
-    </div>
 
 </div>
 
